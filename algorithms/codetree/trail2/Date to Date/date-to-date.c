@@ -17,6 +17,6 @@ int main() {
         days_2 += days_of_month[i];
     }
 
-    printf("%d", days_2 - days_1 - 1);
+    printf("%d", days_2 - days_1);
     return 0;
 }
