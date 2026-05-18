@@ -10,10 +10,10 @@ int main() {
     scanf("%d %d %d %d ", &m1, &d1, &m2, &d2);
 
     days_1 = d1; days_2 = d2;
-    for (int i = 0; i < m1; i++){
+    for (int i = 0; i < m1 - 1; i++){
         days_1 += days_of_month[i];
     }
-    for (int i = 0; i < m2; i++){
+    for (int i = 0; i < m2 - 1; i++){
         days_2 += days_of_month[i];
     }
 
