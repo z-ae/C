@@ -16,6 +16,7 @@ int get_days(int m, int d){
 int get_idx_day(char* day){
     char day_name[7][4] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}; 
     int idx = 0;
+    
 
     while (strcmp(day, day_name[idx])){
         idx++;
