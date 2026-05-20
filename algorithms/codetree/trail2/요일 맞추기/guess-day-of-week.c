@@ -10,6 +10,7 @@ int get_days(int month, int day){
     }
     return days;
 }
+
 int main() {
     // Please write your code here.
     int m1, m2, d1, d2;
