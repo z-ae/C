@@ -16,7 +16,6 @@ int get_days(int m, int d){
 int get_idx_day(char* day){
     char day_name[7][4] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}; 
     int idx = 0;
-    
 
     while (strcmp(day, day_name[idx])){
         idx++;
@@ -38,7 +37,7 @@ int main() {
 
     int idx_day = get_idx_day(day);
     int count = 0;
-    int left_days = diff_days - idx_day;            // 첫 번째 A요일 이후 남은 기간
+    int left_days = diff_days - idx_day - 1;            // 첫 번째 A요일 이후 남은 기간
 
     // A요일 몇 번 등장하는지 구하기
     if (left_days < 0){
@@ -48,15 +47,12 @@ int main() {
         count = 1;
     }
     else{
-        count = ((left_days - 1) / 7) + 1;              
+        count = (left_days / 7) + 1;              
     }
 
     //printf("%d - %d = %d\n", target_days, base_days, diff_days);
     //printf("%d\n", left_days);
     printf("%d", count);
-
-
-
 
     return 0;
 }
