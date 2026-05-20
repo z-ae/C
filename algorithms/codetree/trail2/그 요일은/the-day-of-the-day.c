@@ -33,11 +33,11 @@ int main() {
 
     int base_days = get_days(m1, d1);           
     int target_days = get_days(m2, d2);
-    int diff_days = target_days - base_days + 1;    // 두 날짜 사이 기간
+    int diff_days = target_days - base_days + 1;    // m1.d1 ~ m2.d2 사이 기간
 
     int idx_day = get_idx_day(day);
     int count = 0;
-    int left_days = diff_days - idx_day;    // 첫 번째 A요일 이후 남은 기간
+    int left_days = diff_days - idx_day;            // 첫 번째 A요일 이후 남은 기간
 
     // A요일 몇 번 등장하는지 구하기
     if (left_days < 0){
@@ -47,7 +47,7 @@ int main() {
         count = 1;
     }
     else{
-        count = left_days / 7 + 1;              // +1 : 첫 번째 A요일 포함하기 위해.
+        count = left_days / 7 + 1;              // +1 : 첫 번째 A요일 포함.
     }
 
     printf("%d", count);
