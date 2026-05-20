@@ -47,9 +47,11 @@ int main() {
         count = 1;
     }
     else{
-        count = left_days / 7 + 1;              // +1 : 첫 번째 A요일 포함.
+        count = ((left_days - 1) / 7) + 1;              
     }
 
+    //printf("%d - %d = %d\n", target_days, base_days, diff_days);
+    //printf("%d\n", left_days);
     printf("%d", count);
 
 
