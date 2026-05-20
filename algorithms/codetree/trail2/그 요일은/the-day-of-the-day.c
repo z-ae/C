@@ -27,6 +27,7 @@ int get_idx_day(char* day){
 int main() {
     // Please write your code here.
     int m1, m2, d1, d2;
+    int count = 0;
     char day[4] = {0};
 
     scanf("%d %d %d %d %s", &m1, &d1, &m2, &d2, &day);
@@ -36,15 +37,11 @@ int main() {
     int diff_days = target_days - base_days + 1;    // m1.d1 ~ m2.d2 사이 기간
 
     int idx_day = get_idx_day(day);
-    int count = 0;
-    int left_days = diff_days - idx_day - 1;            // 첫 번째 A요일 이후 남은 기간
+    int left_days = diff_days - idx_day - 1;        // 첫 번째 A요일 이후 남은 기간
 
     // A요일 몇 번 등장하는지 구하기
     if (left_days < 0){
         count = 0;
-    }
-    else if (left_days == 0){
-        count = 1;
     }
     else{
         count = (left_days / 7) + 1;              
