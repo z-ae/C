@@ -25,10 +25,10 @@ int main() {
 
     // 요일 점프
     if (diff_days >= 0){
-        printf("%s", day_name[diff_days % 7]);
+        printf("%s", day_name[(diff_days) % 7]);
     }
     else{
-        printf("%s", day_name[7 + diff_days % 7]);
+        printf("%s", day_name[(diff_days % 7 + 7) % 7]);
     }
 
     return 0;
